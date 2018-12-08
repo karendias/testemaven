@@ -27,10 +27,10 @@ public class TestTCU {
 		driver.findElement(By.id("texto-pesquisa-acordao")).sendKeys("INSS");
 
 		driver.findElement(By.id("ano-acordao")).click();
-		driver.findElement(By.id("ano-acordao")).sendKeys("2018");
-
-//		driver.findElement(By.xpath("//*[contains(@title, 'Buscar')]")).click();
-		Thread.sleep(10000);
+		driver.findElement(By.id("ano-acordao")).sendKeys("2018");		
+		
+		List<WebElement> elementsList = driver.findElements(By.xpath("//button[@title='Buscar']"));
+		elementsList.get(1).click();
 	}
 
 	@After
